@@ -2,6 +2,7 @@ package com.example.anisvideoplayerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.MediaController
 import android.widget.VideoView
 
 class MainActivity : AppCompatActivity() {
@@ -10,5 +11,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val videoView : VideoView = findViewById(R.id.videoView)
+        videoView.setVideoPath("android.resource://"
+                                +packageName+"/"+R.raw.aggallio)
+        val mediaController  = MediaController(this@MainActivity)
     }
 }
